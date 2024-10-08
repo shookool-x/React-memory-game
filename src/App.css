@@ -1,38 +1,83 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  margin: 0 auto;
+  max-width: 900px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-flow: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.App h1 {
+  margin: 0px;
+  color: var(--color3);
+  font-family: 'ordibehesht';
+  font-size: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App>button {
+  font-family: 'dastnevis';
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: none;
+  transition: transform 3s ease-in-out;
+
+  &:hover {
+    background-color: rgb(74, 77, 69);
+    color: var(--color3);
+    animation: chScale 3s infinite linear;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@keyframes chScale {
+  25% {
+    transform: rotate(2deg) scale(1.1);
   }
+
+  75% {
+    transform: rotate(-2deg) scale(0.9);
+  }
+}
+
+.App>span {
+  margin-top: 10px;
+  display: block;
+  font-size: 1rem;
+  color: var(--color3);
+  margin-top: 15px;
+}
+
+.App .record {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App .record button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--color4);
+  margin: 0px 5px;
+  cursor: pointer;
+}
+
+.App .record span {
+  font-size: 1rem;
+  color: var(--color3);
+}
+
+
+/* grid styles */
+
+.card-grid {
+  place-items: center;
+  width: 60%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }

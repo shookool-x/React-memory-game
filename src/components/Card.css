@@ -1,0 +1,24 @@
+.grid-item {
+  position: relative;
+  cursor: pointer;
+}
+
+img {
+  border: 2px solid white;
+  width: 100%;
+  display: block;
+  aspect-ratio: 1;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+img.cover-img {
+  position: absolute;
+  top: 0;
+  transform: rotateY(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+img.cover-img.rotate {
+  transform: rotateY(90deg);
+}
