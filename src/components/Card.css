@@ -6,19 +6,32 @@
 img {
   border: 2px solid white;
   width: 100%;
+  aspect-ratio: 1;
   display: block;
   aspect-ratio: 1;
   border-radius: 20px;
   object-fit: cover;
 }
 
-img.cover-img {
+.main-img {
   position: absolute;
-  top: 0;
-  transform: rotateY(0deg);
-  transition: transform 0.5s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  transform: rotateY(90deg);
+  transition-delay: 0;
 }
 
-img.cover-img.rotate {
+.cover-img {
+  transition: all 0.2s ease-in-out;
+  transition-delay: 0.2s;
+  transform: rotateY(0deg);
+}
+
+.rotate .main-img {
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+
+.rotate .cover-img {
   transform: rotateY(90deg);
+  transition-delay: 0s;
 }

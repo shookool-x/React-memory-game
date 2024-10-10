@@ -14,10 +14,10 @@ interface CardProps {
 
 export default function Card({ imgSrc, handleCover, rotate }: CardProps) {
   return (
-    <div className='grid-item'>
-      <img className='main-img' src={imgSrc.src} alt="no-image" />
+    <div className={`grid-item ${rotate ? 'rotate' : ''}`}>
+      <img className="main-img" src={imgSrc.src} alt="no-image" />
       <img
-        className={`cover-img ${rotate ? 'rotate' : ''} `}
+        className="cover-img "
         onClick={() => { handleCover(imgSrc) }}
         src='/pics/cover4.jpeg'
         alt="no-image" />
